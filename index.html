@@ -12,37 +12,60 @@
       color: #333;
     }
 
-    /* Thanh menu */
+    /* Thanh menu chính */
     .navbar {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
+      background: #222;
+      overflow: hidden;
       display: flex;
-      justify-content: flex-end;
-      background: rgba(0,0,0,0.4);
-      padding: 10px 30px;
-      box-sizing: border-box;
-      z-index: 2;
+      justify-content: center;
     }
-    .navbar a {
+    .navbar a, .dropdown button {
       color: white;
+      padding: 14px 20px;
       text-decoration: none;
-      margin-left: 25px;
-      font-size: 16px;
       font-weight: bold;
-      transition: color 0.3s;
+      border: none;
+      background: none;
+      font-size: 16px;
+      cursor: pointer;
     }
-    .navbar a:hover {
-      color: #ff4444;
+    .navbar a:hover, .dropdown:hover button {
+      background: #4CAF50;
     }
 
-    /* Header với ảnh nền */
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #333;
+      min-width: 180px;
+      z-index: 10;
+      border-radius: 5px;
+    }
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+      background: #4CAF50;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Header */
     .header {
       background: url('http://phongkhongkhongquan.vn/images/video/luc-luong-khong-quan-tham-gia-bay-tong-duyet-tren-quang-truong-ba-dinh_1196.jpg') no-repeat center center/cover;
       height: 300px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       color: white;
@@ -76,56 +99,30 @@
       margin-top: 5px;
       font-weight: 600;
     }
-
-    /* Nội dung chính bố cục 2 cột */
-    .content {
-      padding: 60px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .text-block {
-      flex: 1;
-      min-width: 300px;
-      padding-right: 40px;
-    }
-    .text-block h2 {
-      font-size: 38px;
-      color: #1565c0;
-      margin-bottom: 20px;
-    }
-    .text-block p {
-      font-size: 20px;
-      line-height: 1.6;
-    }
-    .slogan {
-      margin-top: 30px;
-      font-size: 22px;
-      font-weight: bold;
-      color: red;
-    }
-
-    .logo {
-      flex: 1;
-      min-width: 250px;
-      text-align: center;
-    }
-    .logo img {
-      width: 400px;
-      max-width: 100%;
-      height: auto;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Thanh menu -->
+  <!-- Thanh menu với dropdown -->
   <div class="navbar">
-    <a href="#">Trang chủ</a>
-    <a href="#">Danh Sách Lãnh Đạo</a>
-    <a href="#">Danh Sách Lãnh Đạo Đại Đội</a>
-    <a href="#">Nhiệm Vụ</a>
+    <a href="index.html">Trang chủ</a>
+    <a href="lanhdao.html">Lãnh đạo</a>
+    <div class="dropdown">
+      <button>Đại đội ▼</button>
+      <div class="dropdown-content">
+        <a href="dai_doi_333.html">Đại đội 333</a>
+        <a href="dai_doi_999.html">Đại đội 999</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button>Tiểu đội ▼</button>
+      <div class="dropdown-content">
+        <a href="tieudo i1.html">Tiểu đội 1</a>
+        <a href="tieudo i2.html">Tiểu đội 2</a>
+        <a href="tieudo i3.html">Tiểu đội 3</a>
+      </div>
+    </div>
+    <a href="nhiem_vu.html">Nhiệm vụ</a>
   </div>
 
   <!-- Header -->
@@ -134,27 +131,6 @@
       <h1>BỘ QUỐC PHÒNG</h1>
       <h2>VNDF - VietNam National Defense Force | TP. HCM</h2>
       <h3>BINH CHỦNG TĂNG THIẾT GIÁP</h3>
-    </div>
-  </div>
-
-  <!-- Nội dung chính với bố cục logo phải - chữ trái -->
-  <div class="content">
-    <div class="text-block">
-      <h2>BINH CHỦNG TĂNG THIẾT GIÁP</h2>
-      <p>
-        Binh Chủng Tăng Thiết Giáp là lực lượng chủ lực mang tính đột phá của Quân Đội Nhân Dân Thành Phố Hồ Chí Minh
-        trong các nhiệm vụ diễn tập, tác chiến, rèn luyện và kỷ luật quân đội.
-      </p>
-      <div class="slogan">
-        "THÉP ĐÃ TÔI THẾ ĐẤY - SẴN SÀNG CHIẾN ĐẤU, DŨNG CẢM TIẾN CÔNG!"
-      </div>
-      <div class="slogan">
-        TỰ LỰC, TỰ CƯỜNG - CHIẾN ĐẤU OANH LIỆT - THẮNG LỢI VẺ VANG!
-      </div>
-    </div>
-
-    <div class="logo">
-      <img src="huy_hieu_af.png" alt="Huy hiệu AF">
     </div>
   </div>
 
