@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Sách Lãnh Đạo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px;
+      color: #333;
+    }
+
+    .leaders {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .leader-card {
+      background: #fff;
+      border: 5px solid #4CAF50; /* màu viền */
+      border-radius: 15px;
+      padding: 15px;
+      width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .leader-card:hover {
+      transform: scale(1.05);
+    }
+
+    .leader-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .leader-card h3 {
+      margin: 10px 0 5px;
+      color: #222;
+    }
+
+    .leader-card p {
+      margin: 0;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Danh Sách Lãnh Đạo</h1>
+
+  <div class="leaders">
+    <!-- Card lãnh đạo -->
+    <div class="leader-card">
+      <img src="pho_chi_huy.png" alt="Phó Chỉ Huy">
+      <h3>Nguyễn Văn A</h3>
+      <p>Phó Chỉ Huy</p>
+    </div>
+
+    <div class="leader-card">
+      <img src="chi_huy.png" alt="Chỉ Huy">
+      <h3>Trần Văn B</h3>
+      <p>Chỉ Huy</p>
+    </div>
+
+    <div class="leader-card">
+      <img src="lanh_dao.png" alt="Lãnh đạo khác">
+      <h3>Lê Văn C</h3>
+      <p>Lãnh đạo đại đội</p>
+    </div>
+  </div>
+</body>
+</html>
