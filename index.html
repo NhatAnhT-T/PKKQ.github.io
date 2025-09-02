@@ -12,6 +12,31 @@
       color: #333;
     }
 
+    /* Thanh menu */
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 30px;
+      box-sizing: border-box;
+      z-index: 2;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .navbar a:hover {
+      color: #ff4444;
+    }
+
     /* Header với ảnh nền */
     .header {
       background: url('http://phongkhongkhongquan.vn/images/video/luc-luong-khong-quan-tham-gia-bay-tong-duyet-tren-quang-truong-ba-dinh_1196.jpg') no-repeat center center/cover;
@@ -52,42 +77,56 @@
       font-weight: 600;
     }
 
-    /* Nội dung chính */
+    /* Nội dung chính bố cục 2 cột */
     .content {
-      padding: 40px 20px;
-      text-align: center;
+      padding: 60px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    .content h2 {
-      font-size: 32px;
+    .text-block {
+      flex: 1;
+      min-width: 300px;
+      padding-right: 40px;
+    }
+    .text-block h2 {
+      font-size: 38px;
       color: #1565c0;
       margin-bottom: 20px;
     }
-    .content p {
-      font-size: 18px;
+    .text-block p {
+      font-size: 20px;
       line-height: 1.6;
     }
+    .slogan {
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: bold;
+      color: red;
+    }
 
-    /* Logo ở giữa */
     .logo {
-      margin: 30px auto;
+      flex: 1;
+      min-width: 250px;
       text-align: center;
     }
     .logo img {
-      max-width: 280px;
+      width: 400px;
+      max-width: 100%;
       height: auto;
-    }
-
-    /* Khẩu hiệu */
-    .slogan {
-      text-align: center;
-      margin: 20px;
-      font-size: 20px;
-      font-weight: bold;
-      color: red;
     }
   </style>
 </head>
 <body>
+
+  <!-- Thanh menu -->
+  <div class="navbar">
+    <a href="#">Trang chủ</a>
+    <a href="#">Danh Sách Lãnh Đạo</a>
+    <a href="#">Danh Sách Lãnh Đạo Đại Đội</a>
+    <a href="#">Nhiệm Vụ</a>
+  </div>
 
   <!-- Header -->
   <div class="header">
@@ -98,25 +137,24 @@
     </div>
   </div>
 
-  <!-- Nội dung chính -->
+  <!-- Nội dung chính với bố cục logo phải - chữ trái -->
   <div class="content">
-    <h2>BINH CHỦNG TĂNG THIẾT GIÁP</h2>
-    <p>
-      Binh Chủng Tăng Thiết Giáp là lực lượng chủ lực mang tính đột phá của Quân Đội Nhân Dân Thành Phố Hồ Chí Minh
-      trong các nhiệm vụ diễn tập, tác chiến, rèn luyện và kỷ luật quân đội.
-    </p>
+    <div class="text-block">
+      <h2>BINH CHỦNG TĂNG THIẾT GIÁP</h2>
+      <p>
+        Binh Chủng Tăng Thiết Giáp là lực lượng chủ lực mang tính đột phá của Quân Đội Nhân Dân Thành Phố Hồ Chí Minh
+        trong các nhiệm vụ diễn tập, tác chiến, rèn luyện và kỷ luật quân đội.
+      </p>
+      <div class="slogan">
+        "THÉP ĐÃ TÔI THẾ ĐẤY - SẴN SÀNG CHIẾN ĐẤU, DŨNG CẢM TIẾN CÔNG!"
+      </div>
+      <div class="slogan">
+        TỰ LỰC, TỰ CƯỜNG - CHIẾN ĐẤU OANH LIỆT - THẮNG LỢI VẺ VANG!
+      </div>
+    </div>
 
-    <!-- Logo ở giữa -->
     <div class="logo">
       <img src="huy_hieu_af.png" alt="Huy hiệu AF">
-    </div>
-
-    <!-- Khẩu hiệu -->
-    <div class="slogan">
-      "THÉP ĐÃ TÔI THẾ ĐẤY - SẴN SÀNG CHIẾN ĐẤU, DŨNG CẢM TIẾN CÔNG!"
-    </div>
-    <div class="slogan">
-      TỰ LỰC, TỰ CƯỜNG - CHIẾN ĐẤU OANH LIỆT - THẮNG LỢI VẺ VANG!
     </div>
   </div>
 
