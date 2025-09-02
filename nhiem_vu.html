@@ -6,71 +6,77 @@
   <title>Nhiệm Vụ</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f9;
+      margin: 0;
     }
+
+    /* Navbar */
     .navbar {
-      background: linear-gradient(90deg, #1a1a1a, #333);
+      background: #222;
       display: flex;
       justify-content: center;
       padding: 10px 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
     .navbar a {
       color: #fff;
-      padding: 14px 25px;
+      padding: 14px 20px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
-      transition: 0.3s;
+      transition: background 0.3s;
       border-radius: 5px;
       margin: 0 5px;
     }
     .navbar a:hover {
       background: #4CAF50;
-      color: #fff;
     }
+
+    /* Banner */
     .banner {
-      background: url('https://i.ibb.co/3r9xgxL/military-mission.jpg') no-repeat center center/cover;
-      height: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #2196F3;
+      padding: 30px 0;
+      text-align: center;
       color: white;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
     .banner h1 {
-      font-size: 36px;
-      background: rgba(0,0,0,0.5);
-      padding: 15px 30px;
-      border-radius: 10px;
+      margin: 0;
+      font-size: 32px;
+      background: #0d47a1;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
     }
-    .content {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
+
+    /* Nhiệm vụ */
+    .missions {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
-    .task {
+    .mission-card {
       background: #fff;
-      padding: 20px;
-      margin: 20px 0;
       border-radius: 10px;
-      border-left: 6px solid #4CAF50;
+      padding: 20px;
+      margin-bottom: 20px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-left: 6px solid #4CAF50;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .task h3 {
-      margin: 0 0 10px;
-      color: #333;
+    .mission-card:hover {
+      transform: translateX(8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
-    .task p {
+    .mission-card h3 {
+      margin: 0 0 8px;
+      color: #222;
+    }
+    .mission-card p {
       margin: 0;
       color: #555;
-      line-height: 1.6;
+      font-size: 15px;
     }
+
+    /* Footer */
     .footer {
       background: #222;
       color: white;
@@ -81,6 +87,7 @@
   </style>
 </head>
 <body>
+  <!-- Navbar -->
   <div class="navbar">
     <a href="index.html">Trang Chủ</a>
     <a href="lanhdao.html">Danh Sách Lãnh Đạo</a>
@@ -88,25 +95,48 @@
     <a href="nhiem_vu.html">Nhiệm Vụ</a>
   </div>
 
+  <!-- Banner -->
   <div class="banner">
     <h1>Nhiệm Vụ</h1>
   </div>
 
-  <div class="content">
-    <div class="task">
+  <!-- Nhiệm vụ -->
+  <div class="missions">
+    <div class="mission-card">
       <h3>Bảo vệ an ninh biên giới</h3>
       <p>Thực hiện tuần tra, canh gác và đảm bảo an toàn cho khu vực biên giới quốc gia.</p>
     </div>
-    <div class="task">
+    <div class="mission-card">
       <h3>Huấn luyện chiến đấu</h3>
       <p>Tổ chức các buổi huấn luyện kỹ năng quân sự, bắn súng và tác chiến hiện đại.</p>
     </div>
-    <div class="task">
+    <div class="mission-card">
       <h3>Hỗ trợ nhân dân</h3>
       <p>Tham gia cứu trợ thiên tai, giúp đỡ nhân dân trong các tình huống khẩn cấp.</p>
     </div>
+    <div class="mission-card">
+      <h3>Xây dựng công trình quốc phòng</h3>
+      <p>Tham gia xây dựng, củng cố hạ tầng và các công trình phòng thủ chiến lược.</p>
+    </div>
+    <div class="mission-card">
+      <h3>Bảo vệ môi trường</h3>
+      <p>Tổ chức trồng cây, dọn dẹp và giữ gìn cảnh quan thiên nhiên tại khu vực đóng quân.</p>
+    </div>
+    <div class="mission-card">
+      <h3>Phòng chống dịch bệnh</h3>
+      <p>Hỗ trợ công tác y tế, kiểm soát dịch bệnh và bảo đảm sức khỏe cho cộng đồng.</p>
+    </div>
+    <div class="mission-card">
+      <h3>Gìn giữ trật tự an toàn xã hội</h3>
+      <p>Phối hợp với công an để đảm bảo an ninh, trật tự ở địa phương.</p>
+    </div>
+    <div class="mission-card">
+      <h3>Hợp tác quốc tế</h3>
+      <p>Tham gia diễn tập chung, trao đổi kinh nghiệm và tăng cường quan hệ quốc phòng với nước bạn.</p>
+    </div>
   </div>
 
+  <!-- Footer -->
   <div class="footer">
     © 2025 - Website Quân Đội.
   </div>
