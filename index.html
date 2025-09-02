@@ -8,27 +8,81 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background: #f4f4f9;
     }
 
     /* Thanh menu */
     .navbar {
-      background: #222;
-      overflow: hidden;
+      background: linear-gradient(90deg, #1a1a1a, #333);
       display: flex;
       justify-content: center;
+      padding: 10px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .navbar a {
       color: #fff;
-      padding: 14px 20px;
+      padding: 14px 25px;
       text-decoration: none;
-      display: block;
       font-weight: bold;
-      transition: background 0.3s;
+      font-size: 16px;
+      transition: 0.3s;
+      border-radius: 5px;
+      margin: 0 5px;
     }
 
     .navbar a:hover {
       background: #4CAF50;
+      color: #fff;
+    }
+
+    /* Banner */
+    .banner {
+      background: url('https://i.ibb.co/Sv19s2R/military-banner.jpg') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .banner h1 {
+      font-size: 40px;
+      background: rgba(0,0,0,0.5);
+      padding: 15px 30px;
+      border-radius: 10px;
+    }
+
+    /* Nội dung chính */
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .content h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 18px;
+      color: #555;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -41,6 +95,23 @@
     <a href="nhiem_vu.html">Nhiệm Vụ</a>
   </div>
 
-  <h1 style="text-align:center; margin-top:50px;">Chào mừng đến Website Quân Đội</h1>
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Chào mừng đến Website Quân Đội</h1>
+  </div>
+
+  <!-- Nội dung -->
+  <div class="content">
+    <h2>Giới thiệu</h2>
+    <p>
+      Đây là hệ thống quản lý và giới thiệu đội ngũ lãnh đạo quân đội.  
+      Bạn có thể xem danh sách lãnh đạo, lãnh đạo đại đội, và các nhiệm vụ đang thực hiện.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 - Website Quân Đội. Thiết kế bởi bạn.
+  </div>
 </body>
 </html>
