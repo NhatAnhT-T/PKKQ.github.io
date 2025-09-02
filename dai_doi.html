@@ -6,71 +6,93 @@
   <title>Lãnh Đạo Đại Đội</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f9;
+      margin: 0;
     }
+
+    /* Navbar */
     .navbar {
-      background: linear-gradient(90deg, #1a1a1a, #333);
+      background: #222;
       display: flex;
       justify-content: center;
       padding: 10px 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
     .navbar a {
       color: #fff;
-      padding: 14px 25px;
+      padding: 14px 20px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
-      transition: 0.3s;
+      transition: background 0.3s;
       border-radius: 5px;
       margin: 0 5px;
     }
     .navbar a:hover {
       background: #4CAF50;
-      color: #fff;
     }
+
+    /* Banner */
     .banner {
-      background: url('https://i.ibb.co/hKg94Lb/soldier-team.jpg') no-repeat center center/cover;
-      height: 250px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #2196F3;
+      padding: 30px 0;
+      text-align: center;
       color: white;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
     .banner h1 {
-      font-size: 36px;
-      background: rgba(0,0,0,0.5);
-      padding: 15px 30px;
-      border-radius: 10px;
+      margin: 0;
+      font-size: 32px;
     }
-    .content {
+
+    /* Container */
+    .company-section {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .company-section h2 {
       text-align: center;
-      padding: 40px 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* Cards */
+    .leaders {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
     }
     .leader-card {
       background: #fff;
-      border: 3px solid #4CAF50;
+      border: 2px solid #4CAF50;
       border-radius: 15px;
       padding: 15px;
       width: 220px;
-      display: inline-block;
-      margin: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
     }
     .leader-card:hover {
-      transform: scale(1.05);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
     .leader-card img {
       width: 100%;
+      height: auto;
       border-radius: 10px;
+      margin-bottom: 10px;
     }
+    .leader-card h3 {
+      margin: 8px 0 5px;
+      color: #111;
+    }
+    .leader-card p {
+      margin: 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    /* Footer */
     .footer {
       background: #222;
       color: white;
@@ -81,6 +103,7 @@
   </style>
 </head>
 <body>
+  <!-- Navbar -->
   <div class="navbar">
     <a href="index.html">Trang Chủ</a>
     <a href="lanhdao.html">Danh Sách Lãnh Đạo</a>
@@ -88,24 +111,46 @@
     <a href="nhiem_vu.html">Nhiệm Vụ</a>
   </div>
 
+  <!-- Banner -->
   <div class="banner">
     <h1>Lãnh Đạo Đại Đội</h1>
   </div>
 
-  <div class="content">
-    <div class="leader-card">
-      <img src="pho_chi_huy.png" alt="Phó chỉ huy">
-      <h3>Nguyễn Văn A</h3>
-      <p>Đại đội trưởng</p>
-    </div>
-
-    <div class="leader-card">
-      <img src="pho_chi_huy.png" alt="Chỉ huy phó">
-      <h3>Trần Văn B</h3>
-      <p>Chính trị viên</p>
+  <!-- Đại đội 333 -->
+  <div class="company-section">
+    <h2>Đại Đội 333</h2>
+    <div class="leaders">
+      <div class="leader-card">
+        <img src="doitruong333.png" alt="Đại đội trưởng 333">
+        <h3>Đội Trưởng</h3>
+        <p>Đại Đội 333</p>
+      </div>
+      <div class="leader-card">
+        <img src="chinhtrivien333.png" alt="Chính trị viên 333">
+        <h3>Chính Trị Viên</h3>
+        <p>Đại Đội 333</p>
+      </div>
     </div>
   </div>
 
+  <!-- Đại đội 999 -->
+  <div class="company-section">
+    <h2>Đại Đội 999</h2>
+    <div class="leaders">
+      <div class="leader-card">
+        <img src="doitruong999.png" alt="Đại đội trưởng 999">
+        <h3>Đội Trưởng</h3>
+        <p>Đại Đội 999</p>
+      </div>
+      <div class="leader-card">
+        <img src="chinhtrivien999.png" alt="Chính trị viên 999">
+        <h3>Chính Trị Viên</h3>
+        <p>Đại Đội 999</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <div class="footer">
     © 2025 - Website Quân Đội.
   </div>
