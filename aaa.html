@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>PKKQ - Bộ Quốc Phòng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {margin:0;font-family:'Roboto',Arial,sans-serif;background:#fff;}
+    .hero-bg {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 210px;
+      position: relative;
+    }
+    .hero-bg::after {
+      content:"";
+      position:absolute;left:0;top:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.45);
+    }
+    .hero-content {
+      position: absolute;
+      left:0;top:0;width:100%;height:100%;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      z-index:1;
+    }
+    .hero-title {
+      color:#fff;font-size:3rem;font-weight:900;text-align:center;letter-spacing:2px;
+      text-shadow: 2px 2px 8px #333;
+    }
+    .hero-sub {
+      color:#ff3030;font-size:1.2rem;font-weight:bold;margin-top:10px;text-align:center;
+      text-shadow: 1px 1px 4px #222;
+    }
+    .navbar {
+      position:absolute;top:0;right:0;width:100%;height:40px;
+      display:flex;justify-content:flex-end;align-items:center;
+      z-index:10;
+      /* Transparent background */
+    }
+    .navbar ul {
+      list-style:none;display:flex;margin:0;padding:0;
+      align-items:center;
+      background:rgba(30,30,30,0.8);
+      border-radius:0 0 0 12px;
+    }
+    .navbar li {
+      margin:0 2px;
+    }
+    .navbar a {
+      display:inline-block;padding:8px 18px;color:#fff;text-decoration:none;font-weight:bold;
+      border-radius:4px;transition:background .2s;
+      font-size:1rem;
+    }
+    .navbar li.active a, .navbar a:hover {
+      background:#4CAF50;
+      color:#fff;
+    }
+    /* Section styles */
+    section {padding:48px 0 24px 0;}
+    .section-title {
+      text-align:center;font-size:2.2rem;font-weight:900;letter-spacing:1px;color:#2360a5;
+      margin-bottom:18px;text-shadow:1px 1px 8px #eee;
+    }
+    .section-content {
+      display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:32px;
+      max-width:1100px;margin:0 auto;
+    }
+    /* Trang chủ */
+    .main-logo {width:220px;margin:24px;}
+    .main-desc {max-width:480px;margin:auto;text-align:left;font-size:1.1rem;}
+    .main-slogan {text-align:center;margin:18px 0;color:#d32f2f;font-weight:bold;}
+    .main-motto {text-align:center;margin:18px 0;color:#b71c1c;font-weight:bold;font-style:italic;}
+    /* Lãnh đạo */
+    .leader-list {display:flex;justify-content:center;gap:48px;margin-top:32px;}
+    .leader-item {text-align:center;width:220px;}
+    .leader-img {width:140px;height:140px;border-radius:8px;background:#eee;object-fit:cover;}
+    .leader-title {font-size:1.2rem;font-weight:900;margin:10px 0 2px 0;}
+    .leader-title.red {color:#d32f2f;}
+    .leader-title.orange {color:#ff9800;}
+    .leader-title.yellow {color:#FDD835;}
+    .leader-title.blue {color:#1976D2;}
+    .leader-title.green {color:#388E3C;}
+    .leader-rank {font-size:1rem;}
+    /* Đại đội */
+    .company-section {margin:42px 0;}
+    .company-title {text-align:center;font-size:1.6rem;color:#d32f2f;font-weight:900;margin-bottom:18px;}
+    .company-list {display:flex;justify-content:center;gap:48px;}
+    .company-item {width:180px;height:180px;background:#f7f7f7;border-radius:8px;border:1px dashed #ddd;display:flex;align-items:center;justify-content:center;flex-direction:column;}
+    /* Nhiệm vụ */
+    .mission-list {max-width:800px;margin:0 auto;}
+    .mission-list h2,.mission-list h3 {color:#d32f2f;margin-bottom:0;}
+    .mission-list .mission-item {margin:36px 0;}
+    .mission-list .mission-title {font-size:1.5rem;font-weight:900;color:#d32f2f;}
+    .mission-list .mission-desc {font-size:1.1rem;}
+    .mission-list .mission-number {font-size:2rem;font-weight:bold;color:#d32f2f;}
+    /* Responsive */
+    @media(max-width:900px){
+      .leader-list,.company-list {flex-direction:column;align-items:center;}
+    }
+    @media(max-width:600px){
+      .hero-title{font-size:2rem;}
+      section{padding:25px 0 10px 0;}
+      .main-logo{width:120px;}
+      .leader-item{width:90vw;}
+      .company-item{width:90vw;}
+      .navbar a{padding:8px 8px;font-size:0.9rem;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Trang chủ -->
+<div class="hero-bg" id="home">
+  <div class="hero-content">
+    <div class="hero-title">BỘ QUỐC PHÒNG PKKQ</div>
+    <div class="hero-sub">VNDQF - Vietnam National Defense Force | PKKQ<br>Bảo vệ Tổ quốc, Đảm bảo Tương lai</div>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li class="active"><a href="#home">Trang chủ</a></li>
+      <li><a href="#leaders">Danh Sách Lãnh Đạo</a></li>
+      <li><a href="#companies">Lãnh Đạo Đại Đội</a></li>
+      <li><a href="#missions">Nhiệm Vụ</a></li>
+    </ul>
+  </nav>
+</div>
+
+<section>
+  <div class="section-title">BINH CHỦNG PHÒNG KHÔNG - PKKQ</div>
+  <div class="section-content" style="justify-content:center;align-items:center;">
+    <img class="main-logo" src="https://modern-bat-1.10web.cloud/wp-content/uploads/2025/09/logo_gJB8RVaS.svg" alt="PKKQ Logo">
+    <div class="main-desc">
+      PKKQ là lực lượng quân sự chiến lược với sứ mệnh bảo vệ chủ quyền quốc gia, an ninh và ổn định xã hội. Chúng tôi chuyên về phòng thủ, tác chiến chủ động, huấn luyện và kỷ luật nghiêm ngặt. PKKQ luôn sẵn sàng ứng phó mọi tình huống để đảm bảo sự an toàn cho đất nước và nhân dân.
+      <div class="main-slogan">
+        "Luôn vững vàng - Sẵn sàng chiến đấu, chủ động phòng thủ, đảm bảo tương lai!"
+      </div>
+      <div class="main-motto">
+        Tự lực, Tự cường - Chiến đấu oanh liệt - Thắng lợi vẻ vang!
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lãnh đạo -->
+<section id="leaders">
+  <div class="section-title">Danh Sách Lãnh Đạo PKKQ</div>
+  <div class="leader-list">
+    <div class="leader-item">
+      <img class="leader-img" src="https://modern-bat-1.10web.cloud/wp-content/uploads/2025/09/tenweb_media_rreu1rc68.webp" alt="HeyAQ">
+      <div class="leader-title red">Chỉ Huy Trưởng</div>
+      <div class="leader-rank">Thiếu Tướng: Sun (Luxurious)</div>
+    </div>
+    <div class="leader-item">
+      <img class="leader-img" src="https://modern-bat-1.10web.cloud/wp-content/uploads/2025/09/tenweb_media_rgzy3l9nt.webp" alt="Stupid // NhatAnh">
+      <div class="leader-title orange">Phó Chỉ Huy</div>
+      <div class="leader-rank">Đại Tá: HeyAQ (Stupid//NhatAnh)</div>
+    </div>
+    <div class="leader-item">
+      <div class="leader-img"></div>
+      <div class="leader-title yellow">Tham Mưu Trưởng</div>
+      <div class="leader-rank">Đang cập nhật</div>
+    </div>
+    <div class="leader-item">
+      <div class="leader-img"></div>
+      <div class="leader-title blue">Chính Ủy</div>
+      <div class="leader-rank">Đang cập nhật</div>
+    </div>
+    <div class="leader-item">
+      <div class="leader-img"></div>
+      <div class="leader-title green">Phó Tham Mưu Trưởng</div>
+      <div class="leader-rank">Đang cập nhật</div>
+    </div>
+  </div>
+</section>
+
+<!-- Đại đội -->
+<section id="companies">
+  <div class="section-title">Danh Sách Lãnh Đạo Đại Đội</div>
+  <div class="company-section">
+    <div class="company-title">Lãnh Đạo Đơn Vị 333</div>
+    <div class="company-list">
+      <div class="company-item">Đang cập nhật</div>
+      <div class="company-item">Đang cập nhật</div>
+      <div class="company-item">Đang cập nhật</div>
+    </div>
+  </div>
+  <div class="company-section">
+    <div class="company-title">Lãnh Đạo Đơn Vị 999</div>
+    <div class="company-list">
+      <div class="company-item">Đang cập nhật</div>
+      <div class="company-item">Đang cập nhật</div>
+      <div class="company-item">Đang cập nhật</div>
+    </div>
+  </div>
+</section>
+
+<!-- Nhiệm vụ -->
+<section id="missions">
+  <div class="section-title">Nhiệm Vụ của PKKQ</div>
+  <div class="mission-list">
+    <div class="mission-item">
+      <div class="mission-title">1. Chiến đấu – Chủ động phòng thủ – Tác chiến linh hoạt</div>
+      <div class="mission-desc">
+        PKKQ là lực lượng mũi nhọn trong đội hình phòng thủ, chủ động đảm nhận nhiệm vụ bảo vệ, tác chiến, diễn tập và huấn luyện. Thực hiện tấn công bất ngờ, phòng thủ vững chắc, hỗ trợ các đơn vị giữ vững trận địa. “Khi đất nước cần, PKKQ là đơn vị được gọi tên đầu tiên.”
+      </div>
+    </div>
+    <div class="mission-item">
+      <div class="mission-title">2. Bảo vệ và kiểm soát địa bàn chiến lược</div>
+      <div class="mission-desc">
+        Tuần tra, kiểm soát các khu vực trọng yếu, phối hợp cùng các lực lượng để đảm bảo an ninh, kỷ luật và trật tự xã hội. Kết hợp chặt chẽ với các đơn vị: Tiểu đoàn, Bộ binh, lực lượng địa phương.
+      </div>
+    </div>
+    <div class="mission-item">
+      <div class="mission-title">3. Huấn luyện, diễn tập mô phỏng</div>
+      <div class="mission-desc">
+        Tổ chức huấn luyện theo giai đoạn, diễn tập mô phỏng các tình huống chiến đấu thực tế, nâng cao năng lực tác chiến và sẵn sàng ứng phó mọi tình huống.
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
